@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+
+margin: 0;
+padding: 0;
+font-family: 'Barlow', sans-serif;
+background-color: black;
+
+}
+
+
+:root {
+
+--tamanho-header : 80px;
+--tamanho-footer: 90px;
+--tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+}
+
+
+
+/*cabeçalho*/
+
+.header {
+
+height: var(--tamanho-header);
+border-bottom: 2px solid #32b9cd;
+
+}
+
+.titulo{
+    color:#32b9cd;
+    width: fit-content;
+    font-weight: 500;
+
+}
+
+.container {
+
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.header .container {
+
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+.navbar {
+
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #e3b062;
+}
+
+
+.header a{
+
+    text-decoration: none;
+    color: #e3b062;
+
+
+}
+
+.agora{
+    font-weight: 800;
+}
+
+
+/*banner*/
+
+.banner {
+
+    height: var(--tamanho-banner);
+    color: white;
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+    background-size: cover;
+
+}
+
+
+
+
+ .container .card  {
+
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #cacaca;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 550px;
+    margin-top: 250px; 
+    margin-left: 450px;
+ 
+}
+
+.container .cardCad  {
+
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #cacaca;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 550px;
+    margin-top: 150px; 
+    margin-left: 450px;
+ 
+}
+
+
+
+
+.banner .container p {
+
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+
+.banner .container span{
+
+    font-weight: 800;
+
+}
+
+
+.social {
+
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.social .container .boxes {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0;
+
+}
+
+.box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.box img {
+
+    width: 170px;
+
+}
+
+.h2 {
+
+    color: palevioletred;
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 26px;
+
+}
+
+.email {
+
+    border: solid 2px rgb(0, 204, 255);
+    border-radius: 10px;
+    height: 30px;
+    width: 450px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.senha {
+
+    border: solid 2px rgb(0, 204, 255);
+    border-radius: 10px;
+    height: 30px;
+    width: 450px;
+    text-align: center;
+
+}
+
+.campo .acima_input_email {
+
+    display: flex;
+    color: palevioletred;
+    margin-left: 45px;
+    
+}
+
+.campo .acima_input_senha {
+
+    display: flex;
+    color: palevioletred;
+    margin-left: 45px;
+
+}
+
+
+.botao {
+
+    
+    background-color: rgb(212, 24, 87);
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 30px;
+    justify-content: center;
+    width: 110px;
+    height: 30px;
+    border: solid 1px rgb(212, 24, 87);
+
+}
+
+
+
+
+.nomeInput {
+
+    display: flex;
+    color: palevioletred;
+    margin-left: 45px;
+
+}
+
+
+
+.bordaCadastro{
+
+    border: solid 2px rgb(0, 204, 255);
+    border-radius: 10px;
+    height: 30px;
+    width: 450px;
+    text-align: center;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* do rodapé em diante*/
+
+.footer {
+
+    background-color: #32b9cd;
+    height: var(--tamanho-footer);
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+
+}
+
+.footer .container{
+
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.version {
+
+    font-size: 12px;
+
+
+
+
+}
