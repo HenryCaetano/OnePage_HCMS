@@ -3,29 +3,52 @@
 
 body {
 
-margin: 0;
-padding: 0;
-font-family: 'Barlow', sans-serif;
-background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+
 
 }
 
 
 :root {
 
---tamanho-header : 80px;
---tamanho-footer: 90px;
---tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-header : 80px;
+    --tamanho-footer: 90px;
+    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+
 }
 
 
 
 /*cabeçalho*/
 
-.header {
+/*.header {
 
 height: var(--tamanho-header);
-border-bottom: 2px solid #32b9cd;
+background-color: rgb(105, 13, 10);
+border-bottom: 2px solid rgb(105, 13, 10);
+
+
+
+}*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* fica na frente de outros elementos */
+    transition: 0.5s;
+}
+
+.header.rolar {
+
+    height: var(--tamanho-header);
+    background-color: rgb(105, 13, 10);
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
 
 }
 
@@ -54,13 +77,20 @@ border-bottom: 2px solid #32b9cd;
 
 .navbar {
 
-    width: 300px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    color: #e3b062;
+    
 }
+
+
+.navbar .a{
+    color: #ffffff;
+   
+}
+
 
 
 .header a{
@@ -70,6 +100,8 @@ border-bottom: 2px solid #32b9cd;
 
 
 }
+
+
 
 .agora{
     font-weight: 800;
@@ -82,8 +114,97 @@ border-bottom: 2px solid #32b9cd;
 
     height: var(--tamanho-banner);
     color: white;
-    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+    background-image: url('../assets/imgs/petroquimica4.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+
+.social .container .corpo .banneri .containeri{
+
+    height: var(--tamanho-banner);
+    
+    background-image: url('../assets/imgs/socorro.png');
+    background-size: cover;
+    width: 100%;
+
+}
+
+.containeri {
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    filter: blur(100%);
+}
+
+.social .container .corpo .banneri .containeri h3 {
+
+    
+    flex-direction: row;
+    width: 43%;
+    margin-top: 320px;
+    font-size: 30px;
+    margin-left: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    
+    
+}
+
+
+
+
+
+.containere {
+
+    display: flex;
+    width: 80%;
+    margin: auto;
+    filter: blur(100%);
+}
+
+
+
+/*Aqui, a imagem fica parada, mesmo dando um scroll*/
+.bannere {
+
+    height: var(--tamanho-banner);
+    color: white;
+    background-image: url('../assets/imgs/NossosServiços.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: brightness(90%);
+
+
+}
+
+.containere p {
+
+    flex-direction: row;
+    width: 50%;
+    margin-top: 150px;
+    padding: 0;
+    font-size: 70px;
+    margin-left: 490px;
+    margin-right: 500px;
+    color: black;
+    background-color: #ffffff;
+    background-size: 150px;
+    font-weight: bolder;
+}
+
+
+
+.corpo{
+
+    height: var(--tamanho-banner);
+    color: white;
+    background-size: cover;
+
 
 }
 
@@ -105,6 +226,8 @@ border-bottom: 2px solid #32b9cd;
  
 }
 
+
+
 .container .cardCad  {
 
     justify-content: center;
@@ -122,21 +245,163 @@ border-bottom: 2px solid #32b9cd;
 
 
 
-
 .banner .container p {
 
     width: 50%;
-    margin: 0;
+    margin-top: 150px;
     padding: 0;
-    font-size: 36px;
+    font-size: 70px;
+    font-weight: bolder;
+    
 }
+
+.banner .container .coach {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+   
+}
+
+.corCoach {
+
+    color: #c54d3d;
+    font-size: 50px;
+
+}
+
+
+.socorro
+
+
+
+
+
 
 
 .banner .container span{
 
     font-weight: 800;
+    width: 100px;
+    font-weight: bolder;
+    
+}
+
+.social .corpo .quem h1 {
+
+    flex-direction: row;
+    color: black;
+    font-size: 50px;
+    margin-top: 150px;
+    margin-left: 100px;
+
 
 }
+
+.social .corpo .servicos h1 {
+
+    flex-direction: row;
+    color: black;
+    font-size: 50px;
+    margin-top: 150px;
+    margin-left: 590px;
+
+}
+
+
+.social .corpo .sublinhado2 {
+
+    flex-direction: row;
+    margin-left: 580px;
+    margin-top: -150px;
+
+
+}
+
+
+
+/*Aqui está a imagem*/
+.social .container .worker {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 100px;
+    width: 500px;
+    height: 300px;
+    padding: 40px;
+    margin-left: 490px;
+    background-attachment: fixed;
+    background-position: center;
+    
+    
+}
+
+.social .container .sensor {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 100px;
+    width: 600px;
+    height: 500px;
+    padding: 40px;
+    margin-left: 430px;
+    background-attachment: fixed;
+    background-position: center;
+    
+    
+}
+
+
+ .sorrindo2 {
+
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ width: 1000px;
+ height: 700px;
+ padding: 40px;
+ margin-left: -235px;
+
+ }
+
+
+/*Aqui está o texto*/
+.social .container .corpo h3 {
+
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    padding: auto;
+    margin-left: 130px;
+    
+}
+
+.social .container .corpo h2 {
+
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    padding: auto;
+   
+    
+}
+
+
+.social .container .sublinhado {
+
+    
+    flex-direction: row;
+    margin-top: -150px;
+    margin-left: 80px;
+        
+        
+}
+
+
+
+
 
 
 .social {
@@ -166,9 +431,34 @@ border-bottom: 2px solid #32b9cd;
 
 }
 
-.box img {
+.box2 {
 
-    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.box img {
+   
+    width: 740px;
+    margin-left: -190px;
+}
+
+.box2 img {
+
+ 
+    width: 750px;
+
+}
+
+.boxTexto {
+
+    max-width: 80%;
+    margin-left: -170px;
+    
+
 
 }
 
@@ -260,11 +550,50 @@ border-bottom: 2px solid #32b9cd;
 
 
 
+
+
+/* logo */
+.container .logo {
+
+    background-image: url(/OnePage_HCMS/Aquatech_SomenteHTML_Henry_1CCOB/assets/imgs/logo_com_nome.png);
+    height: 70px;
+    width: 160px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    margin-left: -70px;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* do rodapé em diante*/
 
 .footer {
 
-    background-color: #32b9cd;
+    background-color: rgb(177, 94, 91);
     height: var(--tamanho-footer);
     color: #fff;
     display: flex;
